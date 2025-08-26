@@ -1,0 +1,144 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(45, 86%, 94%);
+  --foreground: hsl(30, 25%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(30, 25%, 20%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(30, 25%, 20%);
+  --primary: hsl(22, 96%, 59%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(30, 100%, 43%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(45, 30%, 90%);
+  --muted-foreground: hsl(30, 25%, 40%);
+  --accent: hsl(51, 100%, 50%);
+  --accent-foreground: hsl(30, 25%, 20%);
+  --destructive: hsl(0, 84%, 37%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(45, 30%, 85%);
+  --input: hsl(45, 30%, 97%);
+  --ring: hsl(22, 96%, 59%);
+  
+  /* Saffron color palette */
+  --saffron-50: hsl(29, 100%, 97%);
+  --saffron-100: hsl(29, 100%, 92%);
+  --saffron-200: hsl(29, 100%, 84%);
+  --saffron-300: hsl(29, 100%, 77%);
+  --saffron-400: hsl(29, 100%, 70%);
+  --saffron-500: hsl(22, 100%, 59%);
+  --saffron-600: hsl(20, 95%, 49%);
+  --saffron-700: hsl(16, 85%, 40%);
+  --saffron-800: hsl(13, 70%, 32%);
+  --saffron-900: hsl(10, 55%, 26%);
+  
+  /* Sacred colors */
+  --sacred-gold: hsl(51, 100%, 50%);
+  --sacred-red: hsl(0, 100%, 27%);
+  --sacred-cream: hsl(45, 86%, 94%);
+  --sacred-brown: hsl(25, 47%, 27%);
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius: 1rem;
+}
+
+.dark {
+  --background: hsl(30, 25%, 8%);
+  --foreground: hsl(45, 30%, 90%);
+  --card: hsl(30, 25%, 12%);
+  --card-foreground: hsl(45, 30%, 85%);
+  --popover: hsl(30, 25%, 8%);
+  --popover-foreground: hsl(45, 30%, 90%);
+  --primary: hsl(22, 96%, 59%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(30, 100%, 43%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(30, 25%, 15%);
+  --muted-foreground: hsl(45, 30%, 60%);
+  --accent: hsl(51, 100%, 50%);
+  --accent-foreground: hsl(30, 25%, 8%);
+  --destructive: hsl(0, 84%, 37%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(30, 25%, 20%);
+  --input: hsl(30, 25%, 18%);
+  --ring: hsl(22, 96%, 59%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-body antialiased bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      hsla(22, 100%, 59%, 0.9) 0%, 
+      hsla(20, 95%, 49%, 0.8) 100%
+    );
+  }
+  
+  .sacred-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+}
