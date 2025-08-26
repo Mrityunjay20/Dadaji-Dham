@@ -86,7 +86,7 @@ export default function ContactSection() {
               </h3>
               <div className="bg-gray-100 h-64 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <i className="fas fa-map text-4xl text-gray-400 mb-4"></i>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.3214851876637!2d77.50017787542022!3d23.25335080767655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c41da47504001%3A0xb56f0ef1922c5c80!2sDadaji%20Dham%20Mandir!5e1!3m2!1sen!2sin!4v1756192173823!5m2!1sen!2sin" width="600" height="450" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                   <p className="text-gray-600 font-medium">Google Maps Integration</p>
                   <p className="text-sm text-gray-500 mt-2">पटेल नगर, रायसेन रोड, भोपाल</p>
                 </div>
